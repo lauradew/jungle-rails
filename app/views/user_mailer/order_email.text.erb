@@ -1,0 +1,22 @@
+Thanks for your order, <%= @order.email %>
+===================================================
+
+This is the confirmation of your order,
+your order number is: <%= @order.id %>.
+
+Your items are:
+
+<% @cart_total = 0 %>
+<% @order_items.each do |item| %>
+<% if item = Product.find_by(id: product_id) %>
+<% item_total = item.price  %>
+<% @cart_total += item_total %>
+<%= image_tag item.image.tiny %>
+<%= item.name %>
+Quantity: <%= item.quantity %>
+Price: <%= item_total %>
+<% end %>
+
+Total: <%= @cart_total %>
+
+Thanks for your purchase, have a great day!

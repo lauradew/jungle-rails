@@ -3,6 +3,7 @@ class UserMailer < ApplicationMailer
 
   def confirmation(order)
     @order = order
+
     mail(to: @order.email,
       subject: 'Confirmation of order number #{@order.id}.')
   end

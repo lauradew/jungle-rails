@@ -7,8 +7,8 @@ your order number is: <%= @order.id %>.
 Your items are:
 
 <% @cart_total = 0 %>
-<% @order_items.each do |item| %>
-<% if item = Product.find_by(id: product_id) %>
+<% @order.line_items.each do |item| %>
+<% if item = Product.find_by(id: @order.product_id) %>
 <% item_total = item.price  %>
 <% @cart_total += item_total %>
 <%= image_tag item.image.tiny %>
@@ -18,5 +18,6 @@ Price: <%= item_total %>
 <% end %>
 
 Total: <%= @cart_total %>
+<% end %>
 
 Thanks for your purchase, have a great day!

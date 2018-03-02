@@ -27,8 +27,8 @@
     </div>
 
     <div class="row">
+      <div class="col-sm-8">
       <h4>Reviews</h4>
-      <div class="review-grid">
         <% @product_review.each do |review| %>
         <dl class="dl-horizontal">
           <dt>User:</dt>
@@ -40,6 +40,23 @@
         </dl>
         <% end %>
       </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-8">
+      <h4>Add a review:</h4>
+        <%= form_for [@product, @review] do |review_form| %>
+            <dl class="dl-horizontal">
+            <dt><%= review_form.label :description %></dt>
+            <dd><%= review_form.text_field :description %></dd>
+
+            <dt><%= review_form.label :rating %></dt>
+            <dd><%= review_form.select :rating, ['1', '2', '3', '4', '5'] %></dd>
+            <br>
+            <dd><%= review_form.submit "Add review" %></dd>
+        <% end %>
+      </dl>
+    </div>
     </div>
 
   </article>

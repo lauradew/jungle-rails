@@ -1,12 +1,6 @@
 main section.products-index,
 main section.categories-show {
 
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
-  }
-
   .products {
     display:         flex;
     flex-direction:  row;

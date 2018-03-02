@@ -31,18 +31,19 @@
       <h4>Reviews</h4>
         <% @product_review.each do |review| %>
         <dl class="dl-horizontal">
-          <dt>User:</dt>
-          <dd><%= review.user_id %></dd>
           <dt>Rating:</dt>
           <dd><%= review.rating %></dd>
           <dt>Description:</dt>
           <dd><%= review.description %></dd>
+          <% if current_user && @current_user.id == review.user_id %>
+          <dd><%= button_to "Delete", product_review_url(@product, review), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: "Are you sure?" } %></dd>
+            <% end %>
         </dl>
         <% end %>
       </div>
     </div>
 
-    <% if @current_user %>
+    <% if current_user %>
     <div class="row">
     <div class="col-sm-8">
       <h4>Add a review:</h4>

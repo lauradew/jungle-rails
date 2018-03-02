@@ -153,5 +153,124 @@ review2 = Review.create({
   rating: 2
   })
 
+review3 = Review.create({
+  product_id: 2,
+  user_id: 1,
+  description: 'great for work!',
+  rating: 4
+  })
+
+review4 = Review.create({
+  product_id: 2,
+  user_id: 1,
+  description: 'love the design hate the fit',
+  rating: 3
+  })
+
+review5 = Review.create({
+  product_id: 2,
+  user_id: 1,
+  description: 'terrible fabric',
+  rating: 1
+  })
+
+review6 = Review.create({
+  product_id: 2,
+  user_id: 1,
+  description: "I'd rather wear anything else",
+  rating: 1
+  })
+
+review7 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: 'makes me feel like a model',
+  rating: 5
+  })
+
+review8 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: 'worth every penny',
+  rating: 5
+  })
+
+review9 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: 'softest, most well-structured shirt on the market. great for any occasion',
+  rating: 4
+  })
+
+review10 = Review.create({
+  product_id: 12,
+  user_id: 1,
+  description: 'best bookshelf ever! my cats love the topmost shelf',
+  rating: 5
+  })
+
+review11 = Review.create({
+  product_id: 12,
+  user_id: 1,
+  description: 'wonderful! no need for bookends because the shelves are tilted!',
+  rating: 5
+  })
+
+review12 = Review.create({
+  product_id: 12,
+  user_id: 1,
+  description: 'a true statement piece, but it has given me nightmares',
+  rating: 2
+  })
+
+review13 = Review.create({
+  product_id: 7,
+  user_id: 1,
+  description: 'so fun I broke both my ankles. rad!',
+  rating: 4
+  })
+
+review14 = Review.create({
+  product_id: 7,
+  user_id: 1,
+  description: 'even glides over water!',
+  rating: 5
+  })
+
+review15 = Review.create({
+  product_id: 4,
+  user_id: 1,
+  description: "gives a real bad case of the feet sweats but will make you look like you're trendy without trying. a hipster essential. plus people will think you're even cooler if you have feet sweats and don't care.",
+  rating: 2
+  })
+
+review16 = Review.create({
+  product_id: 4,
+  user_id: 1,
+  description: 'fractals on the foot phalanges! geometrical shapes are the bees knees.',
+  rating: 5
+  })
+
+review17 = Review.create({
+  product_id: 5,
+  user_id: 1,
+  description: 'these upped my espionnage big time',
+  rating: 5
+  })
+
+review18 = Review.create({
+  product_id: 5,
+  user_id: 1,
+  description: 'no grip! I was slipping all over the place! no spy should put up with this bullshit',
+  rating: 1
+  })
+
+review19 = Review.create({
+  product_id: 5,
+  user_id: 1,
+  description: 'minimal arch support, but with a good set of insoles they do the job',
+  rating: 3
+  })
+
 
 puts "DONE!"

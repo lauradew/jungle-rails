@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id]
     @review = Review.new
     @product_review = Review.where(product_id: params[:id])
+    @current_user = User.find(session[:user_id]) if session[:user_id]
   end
 
 end

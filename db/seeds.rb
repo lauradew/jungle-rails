@@ -132,5 +132,26 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+user1 = User.create({
+  first_name: 'Hi',
+  last_name: 'hi',
+  email: 'hi@hi.com',
+  password_digest: 'helloworld'
+  })
+
+review1 = Review.create({
+  product_id: 1,
+  user_id: 1,
+  description: 'new favourite shirt!',
+  rating: 5
+  })
+
+review2 = Review.create({
+  product_id: 2,
+  user_id: 1,
+  description: 'super uncomfortable',
+  rating: 2
+  })
+
 
 puts "DONE!"

@@ -26,6 +26,22 @@
       </div>
     </div>
 
+    <div class="row">
+      <h4>Reviews</h4>
+      <div class="review-grid">
+        <% @product_review.each do |review| %>
+        <dl class="dl-horizontal">
+          <dt>User:</dt>
+          <dd><%= review.user_id %></dd>
+          <dt>Rating:</dt>
+          <dd><%= review.rating %></dd>
+          <dt>Description:</dt>
+          <dd><%= review.description %></dd>
+        </dl>
+        <% end %>
+      </div>
+    </div>
+
   </article>
 
 </section>

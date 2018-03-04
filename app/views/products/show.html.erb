@@ -42,13 +42,14 @@
             <h4 class="modal-title">Add a review:</h4>
           </div>
           <div class="modal-body">
-        <%= form_for [@product, @review] do |review_form| %>
+            <%= form_for [@product, @review] do |review_form| %>
             <dl class="dl-horizontal">
-            <dt><%= review_form.label :description %></dt>
-            <dd><%= review_form.text_field :description, size: "45" %></dd>
-            <br>
-            <dt><%= review_form.label :rating %></dt>
-            <dd><%= review_form.select :rating, ['1', '2', '3', '4', '5'] %></dd>
+              <dt><%= review_form.label :description %></dt>
+              <dd><%= review_form.text_field :description, size: "45" %></dd>
+              <br>
+              <dt><%= review_form.label :rating %></dt>
+              <dd><%= review_form.select :rating, ['1', '2', '3', '4', '5'] %></dd>
+            </dl>
           </div>
           <div class="modal-footer">
             <%= review_form.submit "Add review" %>
@@ -64,6 +65,7 @@
     <br>
     <% else %>
 
+    <% if @average_rating %>
     <div class="order-summary well">
         <h4>Reviews</h4>
 
@@ -98,7 +100,9 @@
             <% end %>
         </tbody>
       </table>
+      Average rating: <%= @average_rating %>
     </div>
+    <% end %>
     <% end %>
 
   </article>
